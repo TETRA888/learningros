@@ -1,7 +1,7 @@
 # learningros
 Notes I took while learning ros2 HUMBLE HAWKSBILL!!!
 
-# ROS2(Robot Operating System 2)
+# ROS2 (Robot Operating System 2)
 ### Essentially it works kind of like unreal engine blue prints semantically but the individual nodes can be a lot
 ### more abstracted and also include hardware sensors, motors and other programs
 
@@ -21,6 +21,11 @@ Notes I took while learning ros2 HUMBLE HAWKSBILL!!!
 # Services
 ### kind of like topics but they follow a caller and response model rather than a publisher and subscriber model like topics
 ### generally for one and done type of communication rather than continous
+
+The node that sends a request is called the client
+the one that responds to the request is called the service node
+
+structure of the request and response is determined by the .srv file
 
 ```
 ```
