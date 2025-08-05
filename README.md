@@ -47,3 +47,6 @@ ros2 param dump /turtlesim > turtlesim.yaml
 ros2 bag record <topic_name>
 ros2 bag play <ros_bag_name>
 ```
+
+# Building packages with colcon
+
