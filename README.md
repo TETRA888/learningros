@@ -49,4 +49,13 @@ ros2 bag play <ros_bag_name>
 ```
 
 # Building packages with colcon
+### append --symlink-install to avoid rebuilding after editing python scripts
+```
+colcon build
+ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name>
+
+# For targeting specific packages you want to bulid
+colcon build --packages-select my_package
+```
+
 
