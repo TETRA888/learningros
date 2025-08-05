@@ -30,4 +30,20 @@ Notes I took while learning ros2 HUMBLE HAWKSBILL!!!
 ### 
 
 ```
+ros2 param list
+ros2 param get /turtlesim background_r
+ros2 param set /turtlesim background_r 255
+
+ros2 param dump /turtlesim > turtlesim.yaml
+```
+
+# Actions
+### Are like continously running services with feedback and are also cancelable
+```
+
+```
+# Using bag to record topic into a data base
+```
+ros2 bag record <topic_name>
+ros2 bag play <ros_bag_name>
 ```
