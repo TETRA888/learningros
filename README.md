@@ -62,5 +62,33 @@ ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name>
 # For targeting specific packages you want to bulid
 colcon build --packages-select my_package
 ```
+# Creating custom messages
+
+### make a srv & msg directories
+```
+mkdir srv msg
+touch filename.srv 
+```
+
+### Update th CMakeLists file
+```
+find_package(geometry_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/Num.msg"
+  "msg/Sphere.msg"
+  "srv/AddThreeInts.srv"
+  DEPENDENCIES geometry_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
+)
+```
+
+### Update your package.xml file to include the following
+```
+<depend>geometry_msgs</depend>
+<buildtool_depend>rosidl_default_generators</buildtool_depend>
+<exec_depend>rosidl_default_runtime</exec_depend>
+<member_of_group>rosidl_interface_packages</member_of_group>
+```
 
 
